@@ -1,0 +1,35 @@
+{
+  "name": "reactproject",
+  "version": "1.0.0",
+  "description": "hello world",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RupSaxena/Reactproject.git"
+  },
+  "keywords": [
+    "react"
+  ],
+  "author": "Rupal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RupSaxena/Reactproject/issues"
+  },
+  "homepage": "https://github.com/RupSaxena/Reactproject#readme",
+  "devDependencies": {
+    "parcel": "^2.12.0",
+    "postcss": "^8.4.38",
+    "process": "^0.11.10",
+    "tailwindcss": "^3.4.3"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.22.3"
+  }
+}
