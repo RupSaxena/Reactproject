@@ -8,9 +8,9 @@ const [showindex, setshowindex]=useState();
 const {restId}=useParams();
 const resinfo=useMenu(restId) ; 
 if(resinfo === null) return <Shimmer/>;
-const{ name, cuisines, costForTwoMessage } = resinfo?.cards[0]?.card?.card?.info;
-const{ itemCards, title } = resinfo?.cards[2].groupedCard.cardGroupMap.REGULAR.cards[1].card.card;
-const categories=resinfo?.cards [2].groupedCard.cardGroupMap.REGULAR.cards.filter (c=>c.card?.card?.["@type"] ==="type.googleapis.com/swiggy.presentation.food.v2.ItemCategory");
+const{ name, cuisines, costForTwoMessage } = resinfo?.cards[2]?.card?.card?.info;
+const{ itemCards, title } = resinfo?.cards[4].groupedCard.cardGroupMap?.REGULAR.cards[3].card.card;
+const categories=resinfo?.cards[4].groupedCard.cardGroupMap?.REGULAR.cards.filter (c=>c.card?.card?.["@type"] ==="type.googleapis.com/swiggy.presentation.food.v2.ItemCategory");
 console.log(categories);
 return (
 <div className="menu text-center">

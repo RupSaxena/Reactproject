@@ -6,24 +6,26 @@ import { RouterProvider, Outlet } from "react-router-dom";
 import Errorpage from "./components/Errorpage"; 
 import About from "./components/About"; 
 import ReactDOM from "react-dom/client";
- import Head from "./components/Head";
+import Head from "./components/Head";
 import Shimmer from "./components/Shimmer";
 import Usercontext from "./utils/usercontext";
 import '/index.css';
 import Contact from "./components/Contact";
- import Menu from "./components/Menu";
-
+import Menu from "./components/Menu";
+import { Provider } from "react-redux";
 import { lazy, Suspense} from "react";
-
+import appstore from "./utils/appstore";
+import Cart from "./components/Cart";
 const Contact = lazy(()=>import("./components/Contact"));
 
 
 
 const Appbody=()=>{
 const [info, setinfo]=useState();
-useEffect(()=>{const data={name: "Ankit"};
+useEffect(()=>{const data={name: "Rupal Saxena"};   
 setinfo(data.name)}, [])
 return (
+    <Provider store={appstore}>
     <Usercontext.Provider value={{loggedUser:info, setinfo}}>
         <div className="appbody">
 <Head/>
@@ -33,17 +35,9 @@ return (
  <Footer/>
  </div>
  </Usercontext.Provider>
-
-
-
-
-
+</Provider>
 )
-
  }
-
-
-
 const approuter=createBrowserRouter([
 {
     path:"/",
@@ -61,6 +55,9 @@ element: <Suspense fallback={<Shimmer/>}><Contact/></Suspense>
  },{
  path:"/restaurants/:restId",
 element: <Menu/>
+},{
+    path:"/cart",
+    element:<Cart/>
 }]
 },
 ])
