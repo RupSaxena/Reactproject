@@ -8,7 +8,7 @@ const Cartslice=createSlice(
 state.items.push(action.payload);
             },
 
-                clearcart:(state,actions)=>{
+                clearcart:(state)=>{
                     state.items.length=0;
                         }
         }

@@ -41,11 +41,11 @@ const {loggedUser, setinfo}=useContext(Usercontext) ;
     }}>Search</button>
     </div>
     <div>
-    <button className="mx-7 px-2 bg-green-200"onClick={()=>{
+    <button className="mx-7 px-2 bg-gray-300 rounded-lg hover:bg-gray-200"onClick={()=>{
 const filterdata=resdatas.filter((res) => res.info.avgRating >=4.2
 )
 setfilteredres(filterdata);
-}}>Top Rated restaurants</button>
+}}>Click here for top Rated restaurants</button>
 <input className="border border-black"type="text" value={loggedUser} onChange={(e)=>setinfo(e.target.value)}/>
  </div>
 </div>
