@@ -9,7 +9,7 @@ const data=useContext(Usercontext) ;
 const {resname}=props;
 return (
 <div className="m-4 p-4 w-[250px] rounded-lg" style={Stylecard}>
-<img className="rounded-lg"src={CDN_Link+resname.info.cloudinaryImageId} alt="image"width="100%" height="100%"/> 
+<img className="rounded-lg"src={CDN_Link+resname.info.cloudinaryImageId} alt="image"width="300px" height="100%"/> 
 <h1 className="font-bold py-4 text-lg">{resname.info.name}</h1> 
 <h3>{resname.info.cuisines.join(" , ")}</h3>
  <h3> {resname.info.avgRating}</h3> 

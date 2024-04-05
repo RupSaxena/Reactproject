@@ -23,7 +23,7 @@ return (
 <li className= "px-4 font-bold">{onlinestatus?"online" : "Offline"} </li>
 <li className= "px-4"><Link to="/">Home</Link></li> 
 <li className="px-4"><Link to="/contact">Contact</Link></li>
- <li className="px-4"><Link to="/cart">Cart-{cartitems.length}items</Link></li>
+ <li className="px-4 font-bold"><Link to="/cart">Cart-{cartitems.length}items</Link></li>
   <li className="px-4"><Link to="/about">About us</Link></li>
   <button onClick={()=>{
     btnName==="login"?
